@@ -1,3 +1,27 @@
 @use 'variables' as *;
 
 // theme, colors, typography, and at least 5 atoms
+
+@mixin set-flex($direction: row, $wrap: wrap) {
+    display: flex;
+    flex-flow: $direction $wrap;
+  }
+  
+  @mixin uppercase($color: $text-dark) {
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $color;
+  }
+
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $fonts-headline;
+  margin: 0;
+}
+
+
+
