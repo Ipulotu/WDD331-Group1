@@ -1,0 +1,139 @@
+/* basic elements */
+$show-first-third: true;
+$show-second-page: false;
+$fade-time: 2s;
+@mixin fade-in {
+    animation: fadeIn ease $fade-time;
+-webkit-animation: fadeIn ease $fade-time;
+-moz-animation: fadeIn ease $fade-time;
+-o-animation: fadeIn ease $fade-time;
+-ms-animation: fadeIn ease $fade-time;
+
+  @keyframes fadeIn {
+	0% {
+	  opacity:0;
+	}
+	100% {
+	  opacity:1;
+	}
+  }
+  
+  @-moz-keyframes fadeIn {
+	0% {
+	  opacity:0;
+	}
+	100% {
+	  opacity:1;
+	}
+  }
+  
+  @-webkit-keyframes fadeIn {
+	0% {
+	  opacity:0;
+	}
+	100% {
+	  opacity:1;
+	}
+  }
+  
+  @-o-keyframes fadeIn {
+	0% {
+	  opacity:0;
+	}
+	100% {
+	  opacity:1;
+	}
+  }
+  
+  @-ms-keyframes fadeIn {
+	0% {
+	  opacity:0;
+	}
+	100% {
+	  opacity:1;
+ 	}
+  }
+}
+@mixin fade-out{
+
+        animation: fadeOut ease $fade-time;
+        -webkit-animation: fadeOut ease $fade-time;
+        -moz-animation: fadeOut ease $fade-time;
+        -o-animation: fadeOut ease $fade-time;
+        -ms-animation: fadeOut ease $fade-time;
+      }
+      @keyframes fadeOut {
+        0% {
+          opacity:1;
+        }
+        100% {
+          opacity:0;
+        }
+      }
+      
+      @-moz-keyframes fadeOut {
+        0% {
+          opacity:1;
+        }
+        100% {
+          opacity:0;
+        }
+      }
+      
+      @-webkit-keyframes fadeOut {
+        0% {
+          opacity:1;
+        }
+        100% {
+          opacity:0;
+        }
+      }
+      
+      @-o-keyframes fadeOut {
+        0% {
+          opacity:1;
+        }
+        100% {
+          opacity:0;
+        }
+      }
+      
+      @-ms-keyframes fadeOut {
+        0% {
+          opacity:1;
+        }
+        100% {
+          opacity:0;
+      }
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+.page-wrapper { 
+
+	display: flex;
+	flex-direction: row;
+	width: 300vw;
+}
+
+.page-wrapper > *{
+	width: 100vw;
+	height: 100vh;
+	
+	background-color: tan;
+}
+
+@if $show-first-third{
+    .intro{
+        @include fade-in();
+    }
+
+    .sidebar{
+        @include fade-in();
+    }
+    #zen-supporting{
+        @include fade-out();
+    }
+}
