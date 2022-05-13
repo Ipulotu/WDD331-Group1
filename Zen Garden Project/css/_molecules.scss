@@ -1,4 +1,4 @@
-@use 'variables' as *;
+@use 'variables';
 @use 'atoms';
 
 $show-first-third: true;
@@ -138,4 +138,8 @@ body {
     #zen-supporting{
         @include fade-out();
     }
+}
+
+header{
+  background-color: variables.$primary;
 }

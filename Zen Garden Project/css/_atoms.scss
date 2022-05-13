@@ -1,26 +1,67 @@
-@use 'variables' as *;
+@use 'variables';
 
 // theme, colors, typography, and at least 5 atoms
 
-@mixin set-flex($direction: row, $wrap: wrap) {
-    display: flex;
-    flex-flow: $direction $wrap;
-  }
+// @mixin set-flex($direction: row, $wrap: wrap) {
+//     display: flex;
+//     flex-flow: $direction $wrap;
+//   }
   
-  @mixin uppercase($color: $text-dark) {
-    font-weight: 300;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: $color;
-  }
+// @mixin uppercase($color: variables.$text-dark) {
+//   font-weight: 300;
+//   letter-spacing: 2px;
+//   text-transform: uppercase;
+//   color: $color;
+// }
 
+body{
+  font-family: variables.$fonts-body;
+  margin: 0px;
+  padding: 5px;
+}
 
 h1,
 h2,
-h3,
-h4 {
-  font-family: $fonts-headline;
-  margin: 0;
+h3{
+  font-family: variables.$fonts-headline;
+
+}
+h2{
+  color: variables.$accent2;
+}
+h1{
+  font-size: 5rem;
+  color: variables.$text-light;
+  text-transform: uppercase;
+}
+
+.main h3{
+  font-size: 3rem;
+  color: variables.$primary;
+  background-color: variables.$accent1;
+  text-align: right;
+  padding: 5px;
+}
+
+.main div{
+  background-color: variables.$primary;
+}
+.main p {
+  color: variables.$text-light;
+}
+.page-wrapper { 
+
+	display: flex;
+	flex-direction: row;
+	width: 330vw;
+}
+
+.page-wrapper > *{
+	width: 100vw;
+	height: 100vh;
+  padding: 0px 5px;
+	margin: 0px 5px;
+	background-color: tan;
 }
 
 
