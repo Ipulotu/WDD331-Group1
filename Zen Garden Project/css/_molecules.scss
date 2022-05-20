@@ -143,3 +143,36 @@ body {
 header{
   background-color: variables.$primary;
 }
+
+
+
+
+#zen-supporting div p {
+  
+  display: none;
+
+  
+}
+
+
+#zen-supporting div{
+  height: 48px;
+  font-size: 1rem;
+  transition: height .5s linear;
+
+}
+
+
+
+#zen-supporting div:hover{
+  height: 300px;
+  font-size: 1rem;
+
+  p{
+    display: block;
+
+  }
+  
+  transition: font-size 1.5s linear;
+}
+

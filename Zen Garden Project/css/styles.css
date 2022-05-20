@@ -216,23 +216,8 @@ header {
   background-color: #102634;
 }
 
-#zen-supporting div p {
-  display: none;
-}
-
-#zen-supporting div {
-  height: 48px;
-  font-size: 1rem;
-  transition: height 0.5s linear;
-}
-
-#zen-supporting div:hover {
-  height: 300px;
-  font-size: 1rem;
-  transition: font-size 1.5s linear;
-}
-#zen-supporting div:hover p {
-  display: block;
+#zen-supporting > div h2:hover ~ p {
+  background-color: pink;
 }
 
 .page-wrapper {
@@ -351,4 +336,4 @@ header {
   -ms-animation: fadeOut ease 2s;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=styles.css.map */
