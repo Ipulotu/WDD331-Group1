@@ -216,6 +216,14 @@ header {
   background-color: #102634;
 }
 
+header h1::before {
+  content: url("./logo.svg");
+}
+
+#outter-shield {
+  fill: aqua;
+}
+
 #zen-supporting div p {
   display: none;
 }

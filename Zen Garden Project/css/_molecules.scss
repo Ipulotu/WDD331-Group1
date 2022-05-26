@@ -142,9 +142,19 @@ body {
 
 header{
   background-color: variables.$primary;
+
+  // ::before{
+  //   content: url('./logo.svg');
+  // }
 }
 
+header h1::before{
+  content: url('./logo.svg');
+}
 
+#outter-shield{
+  fill: aqua;
+}
 
 
 #zen-supporting div p {

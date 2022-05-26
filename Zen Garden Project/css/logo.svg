@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke: #231f20;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2, .cls-3 {
+        fill: none;
+      }
+
+      .cls-3 {
+        font-size: 36px;
+        font-family: Helvetica-Bold, Helvetica;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <g id="outter-shield">
+    <polygon class="cls-1" points="271.77 326.53 149.86 362.14 26.57 326.53 0.54 0.5 299.17 0.5 271.77 326.53"/>
+  </g>
+  <g id="inner-shield">
+    <polygon class="cls-2" points="268.52 24.98 246.74 306.88 149.85 337.68 51.87 306.88 31.19 24.98 268.52 24.98"/>
+  </g>
+  <g id="three">
+    <polygon class="cls-1" points="56.75 75.12 243.05 75.12 243.05 112.48 158.12 153.57 237.57 153.57 226.61 278.23 149.9 301.52 74.56 275.49 69.08 212.48 107.43 215.22 110.17 245.35 149.9 257.68 192.36 245.35 195.1 196.04 69.08 194.67 63.6 153.57 156.75 113.85 62.23 112.48 56.75 75.12"/>
+  </g>
+  <g id="text-css">
+    <text class="cls-3" transform="translate(104.99 62.22)">C S S</text>
+  </g>
+</svg>
