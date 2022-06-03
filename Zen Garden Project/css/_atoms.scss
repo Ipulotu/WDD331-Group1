@@ -35,13 +35,17 @@ h1{
   text-transform: uppercase;
 }
 
+
+
 .main h3{
-  font-size: 3rem;
+  // font-size: 3rem;
+  font-size: clamp(3vw, 5vw, 7vw);
   color: variables.$primary;
   background-color: variables.$accent1;
   text-align: right;
   padding: 5px;
 }
+
 
 .main div{
   background-color: variables.$primary;

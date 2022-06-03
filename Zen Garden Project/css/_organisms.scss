@@ -10,21 +10,22 @@
 }
 
 .page-wrapper > *{
-	width: 100vw;
+	width: 95vw;
 	height: 100vh;
+    margin: auto;
 	
 	background-color: tan;
 }
 
-@if molecules.$show-first-third{
-    .intro{
-        @include molecules.fade-in();
-    }
+// @if molecules.$show-first-third{
+//     .intro{
+//         @include molecules.fade-in();
+//     }
 
-    .sidebar{
-        @include molecules.fade-in();
-    }
-    #zen-supporting{
-        @include molecules.fade-out();
-    }
-}
+//     .sidebar{
+//         @include molecules.fade-in();
+//     }
+//     #zen-supporting{
+//         @include molecules.fade-out();
+//     }
+// }

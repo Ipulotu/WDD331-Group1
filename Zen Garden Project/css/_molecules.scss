@@ -127,18 +127,18 @@ body {
 	background-color: tan;
 }
 
-@if $show-first-third{
-    .intro{
-        @include fade-in();
-    }
+// @if $show-first-third{
+//     .intro{
+//         @include fade-in();
+//     }
 
-    .sidebar{
-        @include fade-in();
-    }
-    #zen-supporting{
-        @include fade-out();
-    }
-}
+//     .sidebar{
+//         @include fade-in();
+//     }
+//     #zen-supporting{
+//         @include fade-out();
+//     }
+// }
 
 header{
   background-color: variables.$primary;
@@ -148,9 +148,9 @@ header{
   // }
 }
 
-header h1::before{
-  content: url('./logo.svg');
-}
+// header h1::before{
+//   content: url('./logo.svg');
+// }
 
 #outter-shield{
   fill: aqua;
@@ -173,7 +173,6 @@ header h1::before{
 }
 
 
-
 #zen-supporting div:hover{
   height: 300px;
   font-size: 1rem;
@@ -183,6 +182,10 @@ header h1::before{
 
   }
   
+  ~ div{
+    display: none;
+  }
+  // transition: height .5s linear;
   transition: font-size 1.5s linear;
 }
 
