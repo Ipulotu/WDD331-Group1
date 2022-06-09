@@ -8,3 +8,11 @@ $accent1: #90564a;
 $accent2: #a99e8c;
 $text-dark: #333;
 $text-light: #fff;
+
+
+$break-large: 900px;
+
+
+@mixin largeView() {
+  @media (min-width: $break-large) { @content; }
+}   
