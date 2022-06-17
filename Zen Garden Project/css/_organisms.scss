@@ -29,3 +29,12 @@
 //         @include molecules.fade-out();
 //     }
 // }
+
+
+.sidebar{
+	::after{
+		content: url("logo.svg");
+		width: 10px;
+		height: 20px;
+	}
+}

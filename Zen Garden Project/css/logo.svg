@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="1 1 1 50%">
   <defs>
     <style>
       .cls-1 {
-        fill: #fff;
+        fill: #2965f1;
       }
 
       .cls-1, .cls-2, .cls-3 {
@@ -14,13 +14,15 @@
       }
 
       .cls-2, .cls-3 {
-        fill: none;
+        fill: white;
       }
 
       .cls-3 {
         font-size: 36px;
         font-family: Helvetica-Bold, Helvetica;
         font-weight: 700;
+        fill: #2965f1;
+        
       }
     </style>
   </defs>
