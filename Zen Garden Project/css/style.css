@@ -63,8 +63,39 @@ body {
 
 .page-wrapper > * {
   width: 100vw;
-  height: 100vh;
+  max-height: 100vh;
   background-color: tan;
+}
+
+#zen-intro {
+  padding: 0px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 2fr;
+}
+#zen-intro > * {
+  padding: 10px;
+}
+#zen-intro header {
+  margin: 0px;
+  grid-column: 1/span 2;
+  max-height: 330px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+#zen-intro header h1 {
+  grid-column: 1/span 2;
+}
+#zen-intro header h2 {
+  grid-column: 2/span 1;
+  text-align: center;
+}
+#zen-intro #zen-preamble {
+  background-color: white;
+  grid-column: 1/span 1;
+  grid-row: 2/span 2;
+  border: solid #102634;
+  border-width: 0px 0px 2px 2px;
 }
 
 header {
@@ -139,6 +170,9 @@ header {
 
 .sidebar {
   background-image: url("logo.svg");
+  background-position: center;
+  background-position-x: 25px;
+  background-position-y: 25px;
 }
 
 /*# sourceMappingURL=style.css.map */

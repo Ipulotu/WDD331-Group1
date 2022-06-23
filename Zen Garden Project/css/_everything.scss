@@ -67,11 +67,46 @@ body{
 
 .page-wrapper > *{
 	width: 100vw;
-	height: 100vh;
+	max-height: 100vh;
 	
 	background-color: tan;
 }
 
+#zen-intro{
+  padding: 0px; 
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 2fr;
+
+  > * {
+    padding: 10px
+  }
+  header{
+    margin: 0px;
+    grid-column: 1 / span 2;
+    max-height: 330px;
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    h1{
+      grid-column: 1 / span 2;
+    }
+
+    h2{
+      grid-column: 2 / span 1;
+      text-align: center;
+    }
+  }
+  #zen-preamble{
+    
+    background-color: white;
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 2;
+    border: solid variables.$primary;
+    border-width: 0px 0px 2px 2px;
+
+  }
+}
 
 
 header{
@@ -172,7 +207,9 @@ header{
 }
 
 .sidebar{
-    background-image:  url("logo.svg");
-
+  background-image:  url("logo.svg");
+  background-position: center;
+  background-position-x: 25px;
+  background-position-y: 25px;
 
 }
