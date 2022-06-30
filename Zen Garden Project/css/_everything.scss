@@ -58,19 +58,19 @@ body{
 	margin: 0;
 	padding: 0;
 }
-.page-wrapper { 
+// .page-wrapper { 
 
-	display: flex;
-	flex-direction: row;
-	width: 300vw;
-}
+// 	display: flex;
+// 	flex-direction: row;
+// 	width: 300vw;
+// }
 
-.page-wrapper > *{
-	width: 100vw;
-	max-height: 100vh;
+// .page-wrapper > *{
+// 	width: 100vw;
+// 	max-height: 100%;
 	
-	background-color: tan;
-}
+// 	background-color: tan;
+// }
 
 #zen-intro{
   padding: 0px; 
@@ -131,37 +131,37 @@ header{
   // }
   
   
-  #zen-supporting div p {
+  // #zen-supporting div p {
     
-    display: none;
+  //   display: none;
   
     
-  }
+  // }
   
   
-  #zen-supporting div{
-    height: 48px;
-    font-size: 1rem;
-    transition: height .5s linear;
+  // #zen-supporting div{
+  //   height: 48px;
+  //   font-size: 1rem;
+  //   // transition: height .5s linear;
   
-  }
+  // }
   
   
-  #zen-supporting div:hover{
-    height: 300px;
-    font-size: 1rem;
+  // #zen-supporting div:hover{
+  //   height: 300px;
+  //   font-size: 1rem;
   
-    p{
-      display: block;
+  //   p{
+  //     display: block;
   
-    }
+  //   }
     
-    ~ div{
-      display: none;
-    }
-    // transition: height .5s linear;
-    transition: font-size 1.5s linear;
-  }
+  //   ~ div{
+  //     display: none;
+  //   }
+  //   // transition: height .5s linear;
+  //   transition: font-size 1.5s linear;
+  // }
   
   
   .wrapper{
@@ -195,15 +195,45 @@ header{
 
 	display: flex;
 	flex-direction: row;
-	width: 300vw;
+	width: 570vw;
 }
 
-.page-wrapper > *{
-	width: 95vw;
-	height: 100vh;
-    margin: auto;
-	
-	background-color: tan;
+.page-wrapper{
+
+
+  #zen-intro, aside{
+    width: 95vw;
+	  height: 95vh;
+    margin:  0px auto;
+	  background-color: tan;
+  }
+
+  #zen-supporting{
+    width: 400vw;
+	  height: 95vh;
+    margin: 0px auto;
+	  background-color: white;
+
+    display:flex;
+    flex-direction: row;
+
+    a{
+      color: variables.$accent2;
+    }
+
+    div{
+      // height: 48px;
+      font-size: 1rem;
+      margin: 0px 5px;
+      padding: 5px;
+      max-width: 95vw;
+    
+    }
+
+    footer{
+      display: none;
+    }
+  }
 }
 
 .sidebar{

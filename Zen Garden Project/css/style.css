@@ -55,18 +55,6 @@ body {
   padding: 0;
 }
 
-.page-wrapper {
-  display: flex;
-  flex-direction: row;
-  width: 300vw;
-}
-
-.page-wrapper > * {
-  width: 100vw;
-  max-height: 100vh;
-  background-color: tan;
-}
-
 #zen-intro {
   padding: 0px;
   display: grid;
@@ -106,28 +94,6 @@ header {
   fill: aqua;
 }
 
-#zen-supporting div p {
-  display: none;
-}
-
-#zen-supporting div {
-  height: 48px;
-  font-size: 1rem;
-  transition: height 0.5s linear;
-}
-
-#zen-supporting div:hover {
-  height: 300px;
-  font-size: 1rem;
-  transition: font-size 1.5s linear;
-}
-#zen-supporting div:hover p {
-  display: block;
-}
-#zen-supporting div:hover ~ div {
-  display: none;
-}
-
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -158,14 +124,34 @@ header {
 .page-wrapper {
   display: flex;
   flex-direction: row;
-  width: 300vw;
+  width: 570vw;
 }
 
-.page-wrapper > * {
+.page-wrapper #zen-intro, .page-wrapper aside {
   width: 95vw;
-  height: 100vh;
-  margin: auto;
+  height: 95vh;
+  margin: 0px auto;
   background-color: tan;
+}
+.page-wrapper #zen-supporting {
+  width: 400vw;
+  height: 95vh;
+  margin: 0px auto;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+}
+.page-wrapper #zen-supporting a {
+  color: #a99e8c;
+}
+.page-wrapper #zen-supporting div {
+  font-size: 1rem;
+  margin: 0px 5px;
+  padding: 5px;
+  max-width: 95vw;
+}
+.page-wrapper #zen-supporting footer {
+  display: none;
 }
 
 .sidebar {
