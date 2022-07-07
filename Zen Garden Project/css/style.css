@@ -86,6 +86,34 @@ body {
   border-width: 0px 0px 2px 2px;
 }
 
+#zen-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+#zen-summary p {
+  grid-column: 1/span 4;
+}
+
+#zen-summary::after {
+  content: url("arrow.svg");
+  grid-column: 1/span 2;
+  animation: move-right 2s 0s infinite;
+}
+
+@keyframes move-right {
+  0% {
+    grid-column: 1/span 1;
+  }
+  25% {
+    grid-column: 2/span 1;
+  }
+  50% {
+    grid-column: 3/span 1;
+  }
+  100% {
+    grid-column: 4/span 2;
+  }
+}
 header {
   background-color: #102634;
 }
