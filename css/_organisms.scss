@@ -2,39 +2,120 @@
 @use 'molecules';
 
 
-.page-wrapper { 
-
+.page-wrapper{
 	display: flex;
 	flex-direction: row;
-	width: 300vw;
-}
-
-.page-wrapper > *{
-	width: 95vw;
-	height: 100vh;
-    margin: auto;
-	
-	background-color: tan;
-}
-
-// @if molecules.$show-first-third{
-//     .intro{
-//         @include molecules.fade-in();
-//     }
-
-//     .sidebar{
-//         @include molecules.fade-in();
-//     }
-//     #zen-supporting{
-//         @include molecules.fade-out();
-//     }
-// }
-
-
-.sidebar{
-	::after{
-		content: url("logo.svg");
-		width: 10px;
-		height: 20px;
+	width: 570vw;
+  
+	#zen-intro, aside{
+		width: 95vw;
+		height: 95vh;
+		margin:  0px auto;
+		background-color: tan;
+		overflow-y:auto;
 	}
-}
+  
+	#zen-supporting{
+		width: 400vw;
+		height: 95vh;
+		margin: 0px auto;
+		background-color: white;
+		display:flex;
+		flex-direction: row;
+  
+		a{color: variables.$accent2;}
+  
+	  	div{
+			font-size: 1rem;
+			margin: 0px 5px;
+			padding: 5px;
+			max-width: 95vw;
+			overflow-y:auto;
+	  	}
+  
+	  	footer{
+			display: none;
+	  	}
+	}
+  }
+  
+  #zen-intro{
+	padding: 0px; 
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	grid-template-rows: 1fr 2fr;
+  
+	@media screen  and (max-width: 500px) { 
+	  display: flex;
+	  flex-direction: column;
+	}
+  
+	> * {
+	  padding: 10px
+	}
+  
+	header{
+	  margin: 0px;
+	  grid-column: 1 / span 2;
+	  max-height: 330px;
+	  display: grid;
+	  grid-template-columns: 3fr 1fr;
+  
+	  @media screen  and (max-width: 820px) { 
+		flex-direction: column; 
+	  }
+	  @media screen  and (max-width: 500px) { 
+		grid-column: none;
+		max-height: 130px;
+	  }
+	
+	  h1{
+		grid-column: 1 / span 2;
+		@media screen  and (max-width: 500px) { 
+		  grid-column: none;
+		  font-size: 2rem;
+		  margin-bottom: 0px;
+		}
+	  }
+  
+	  h2{
+		grid-column: 2 / span 1;
+		text-align: center;
+		@media screen  and (max-width: 500px) { 
+		  grid-column: none;
+		  font-size: 1rem;
+		  text-align: left;
+		}
+	  }
+	}
+	#zen-preamble{
+	  
+	  background-color: white;
+	  grid-column: 1 / span 1;
+	  grid-row: 2 / span 2;
+	  border: solid variables.$primary;
+	  border-width: 0px 0px 2px 2px;
+	  overflow-y:auto;
+  
+	  @media screen  and (max-width: 500px) { 
+		grid-column: none;
+		
+		border-width: 0px;
+	  }
+  
+	}
+	#zen-summary{
+		display: grid;
+		grid-template-columns: repeat(4, 1fr) ;
+	  
+		p{
+		  grid-column: 1/ span 4;
+		}
+	  }
+
+	#zen-summary::after{
+		content:  url("arrow.svg");
+		grid-column: 1/ span 1;
+		animation: move-right 2s 0s infinite;
+	  }
+  }

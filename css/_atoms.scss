@@ -2,56 +2,6 @@
 
 // theme, colors, typography, and at least 5 atoms
 
-// @mixin set-flex($direction: row, $wrap: wrap) {
-//     display: flex;
-//     flex-flow: $direction $wrap;
-//   }
-  
-// @mixin uppercase($color: variables.$text-dark) {
-//   font-weight: 300;
-//   letter-spacing: 2px;
-//   text-transform: uppercase;
-//   color: $color;
-// }
-
-// :root{
-//   --ratio: 1.5;
-//   --s-5: calc(var(--s-4) / var(--ratio));
-//   --s-4: calc(var(--s-3) / var(--ratio));
-//   --s-3: calc(var(--s-2) / var(--ratio));
-//   --s-2: calc(var(--s-1) / var(--ratio));
-//   --s-1: calc(var(--s0) / var(--ratio));
-//   --s0: 1rem;
-//   --s1: calc(var(--s0) * var(--ratio));
-//   --s2: calc(var(--s1) * var(--ratio));
-//   --s3: calc(var(--s2) * var(--ratio));
-//   --s4: calc(var(--s3) * var(--ratio));
-//   --s5: calc(var(--s4) * var(--ratio));
-
-//   --font-color: #333;
-//   /* set variation axis values */
-//   --mono: "MONO" 0; /* Monospace: Sans (natural-width) or Mono (fixed-width) */
-//   --casl: "CASL" 0; /* Casual: Linear to Casual */
-//   --wght: 300; /* Weight: Light to ExtraBlack; usually set with `font-weight` */
-//   --slnt: 0deg; /* Slant: 0 to -15 degrees, auto cursive at -14 */
-//   --crsv: "CRSV" 0.5; /* Cursive: always roman (0), auto substitution (.5), or always cursive (1) */
-
-// }
-
-// * {
-//   font-weight: var(--wght);
-//   font-style: oblique var(--slnt);
-//   font-variation-settings: var(--mono), var(--casl), var(--crsv);
-// }
-
-
-
-body{
-  font-family: variables.$fonts-body;
-  margin: 0px;
-  padding: 5px;
-}
-
 h1,
 h2,
 h3{
@@ -65,40 +15,14 @@ h1{
   font-size: 5rem;
   color: variables.$text-light;
   text-transform: uppercase;
-  //--wght: 800;
 }
 
-
-
-
-.main h3{
-  // font-size: 3rem;
-  font-size: clamp(3vw, 5vw, 7vw);
-  color: variables.$primary;
-  background-color: variables.$accent1;
-  text-align: right;
-  padding: 5px;
-}
-
-
-.main div{
+header{
   background-color: variables.$primary;
 }
-.main p {
-  color: variables.$text-light;
-}
-.page-wrapper { 
 
-	display: flex;
-	flex-direction: row;
-	//width: 330vw;
+body{
+  font-family: variables.$fonts-body;
+  margin: 0px;
+  padding: 0px;
 }
-
-.page-wrapper > *{
-	width: 100vw;
-	height: 100vh;
-  padding: 0px 5px;
-	margin: 0px 5px;
-	background-color: tan;
-}
-

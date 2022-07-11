@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:slnt,wght,CASL,CRSV,MONO@-15..0,300..900,0..1,0..1,0..1&display=swap');
 //@import url('https://fonts.googleapis.com/css2?family=Merriweather:slnt,wght,CASL,CRSV,MONO@-15..0,300..900,0..1,0..1,0..1&display=swap');
 
-
-
-
-
-
 $fonts-headline: 'Merriweather', serif;
 $fonts-body:  'helvetica', sans-serif;
 $background-color: #daede2;
@@ -22,3 +17,12 @@ $break-large: 900px;
 @mixin largeView() {
   @media (min-width: $break-large) { @content; }
 }   
+
+
+@keyframes move-right {
+  0%   {grid-column: 1/ span 1;}
+  25%  {grid-column: 2/ span 1}
+  50%  {grid-column: 3/ span 1}
+  75%  {}
+  100% {grid-column: 4/ span 1;}
+}

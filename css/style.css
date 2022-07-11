@@ -1,10 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:slnt,wght,CASL,CRSV,MONO@-15..0,300..900,0..1,0..1,0..1&display=swap");
-body {
-  font-family: "helvetica", sans-serif;
-  margin: 0px;
-  padding: 5px;
+@keyframes move-right {
+  0% {
+    grid-column: 1/span 1;
+  }
+  25% {
+    grid-column: 2/span 1;
+  }
+  50% {
+    grid-column: 3/span 1;
+  }
+  100% {
+    grid-column: 4/span 1;
+  }
 }
-
 h1,
 h2,
 h3 {
@@ -21,6 +29,16 @@ h1 {
   text-transform: uppercase;
 }
 
+header {
+  background-color: #102634;
+}
+
+body {
+  font-family: "helvetica", sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
 .main h3 {
   font-size: 5vw;
   color: #102634;
@@ -28,14 +46,12 @@ h1 {
   text-align: right;
   padding: 5px;
 }
-
 .main div {
   background-color: #102634;
 }
 .main div a {
   color: #102634;
 }
-
 .main p {
   color: #fff;
 }
@@ -53,9 +69,66 @@ h1 {
   background-color: tan;
 }
 
-body {
-  margin: 0;
-  padding: 0;
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+@media (min-width: 900px) {
+  .wrapper {
+    flex-direction: row;
+  }
+}
+.wrapper > div {
+  background-image: linear-gradient(to right, #a99e8c, #90564a);
+  border: 2px solid white;
+  border-radius: 20px;
+  padding: 1rem;
+}
+.wrapper .design-archives {
+  order: 2;
+}
+@media (min-width: 900px) {
+  .wrapper .design-archives {
+    order: -1;
+  }
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 570vw;
+}
+.page-wrapper #zen-intro, .page-wrapper aside {
+  width: 95vw;
+  height: 95vh;
+  margin: 0px auto;
+  background-color: tan;
+  overflow-y: auto;
+}
+.page-wrapper #zen-supporting {
+  width: 400vw;
+  height: 95vh;
+  margin: 0px auto;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+}
+.page-wrapper #zen-supporting a {
+  color: #a99e8c;
+}
+.page-wrapper #zen-supporting div {
+  font-size: 1rem;
+  margin: 0px 5px;
+  padding: 5px;
+  max-width: 95vw;
+  overflow-y: auto;
+}
+.page-wrapper #zen-supporting footer {
+  display: none;
 }
 
 #zen-intro {
@@ -82,7 +155,6 @@ body {
 }
 @media screen and (max-width: 820px) {
   #zen-intro header {
-    display: flex;
     flex-direction: column;
   }
 }
@@ -127,104 +199,17 @@ body {
     border-width: 0px;
   }
 }
-
-#zen-summary {
+#zen-intro #zen-summary {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
-#zen-summary p {
+#zen-intro #zen-summary p {
   grid-column: 1/span 4;
 }
-
-#zen-summary::after {
+#zen-intro #zen-summary::after {
   content: url("arrow.svg");
   grid-column: 1/span 1;
   animation: move-right 2s 0s infinite;
-}
-
-@keyframes move-right {
-  0% {
-    grid-column: 1/span 1;
-  }
-  25% {
-    grid-column: 2/span 1;
-  }
-  50% {
-    grid-column: 3/span 1;
-  }
-  100% {
-    grid-column: 4/span 1;
-  }
-}
-header {
-  background-color: #102634;
-}
-
-#outter-shield {
-  fill: aqua;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-@media (min-width: 900px) {
-  .wrapper {
-    flex-direction: row;
-  }
-}
-.wrapper > div {
-  background-image: linear-gradient(to right, #a99e8c, #90564a);
-  border: 2px solid white;
-  border-radius: 20px;
-  padding: 1rem;
-}
-.wrapper .design-archives {
-  order: 2;
-}
-@media (min-width: 900px) {
-  .wrapper .design-archives {
-    order: -1;
-  }
-}
-
-.page-wrapper {
-  display: flex;
-  flex-direction: row;
-  width: 570vw;
-}
-
-.page-wrapper #zen-intro, .page-wrapper aside {
-  width: 95vw;
-  height: 95vh;
-  margin: 0px auto;
-  background-color: tan;
-  overflow-y: auto;
-}
-.page-wrapper #zen-supporting {
-  width: 400vw;
-  height: 95vh;
-  margin: 0px auto;
-  background-color: white;
-  display: flex;
-  flex-direction: row;
-}
-.page-wrapper #zen-supporting a {
-  color: #a99e8c;
-}
-.page-wrapper #zen-supporting div {
-  font-size: 1rem;
-  margin: 0px 5px;
-  padding: 5px;
-  max-width: 95vw;
-  overflow-y: auto;
-}
-.page-wrapper #zen-supporting footer {
-  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

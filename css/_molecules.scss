@@ -1,199 +1,34 @@
 @use 'variables';
 @use 'atoms';
 
-$show-first-third: true;
-$show-second-page: false;
-$fade-time: 2s;
-@mixin fade-in {
-    animation: fadeIn ease $fade-time;
--webkit-animation: fadeIn ease $fade-time;
--moz-animation: fadeIn ease $fade-time;
--o-animation: fadeIn ease $fade-time;
--ms-animation: fadeIn ease $fade-time;
 
-  @keyframes fadeIn {
-	0% {
-	  opacity:0;
-	}
-	100% {
-	  opacity:1;
-	}
+.main{
+  h3{
+    font-size: clamp(3vw, 5vw, 7vw);
+    color: variables.$primary;
+    background-image: linear-gradient(to right, variables.$accent2, variables.$accent1);
+    text-align: right;
+    padding: 5px;
   }
-  
-  @-moz-keyframes fadeIn {
-	0% {
-	  opacity:0;
-	}
-	100% {
-	  opacity:1;
-	}
+  div{
+    background-color: variables.$primary;
+    a{color: variables.$primary;}
   }
-  
-  @-webkit-keyframes fadeIn {
-	0% {
-	  opacity:0;
-	}
-	100% {
-	  opacity:1;
-	}
-  }
-  
-  @-o-keyframes fadeIn {
-	0% {
-	  opacity:0;
-	}
-	100% {
-	  opacity:1;
-	}
-  }
-  
-  @-ms-keyframes fadeIn {
-	0% {
-	  opacity:0;
-	}
-	100% {
-	  opacity:1;
- 	}
-  }
-}
-@mixin fade-out{
-
-        animation: fadeOut ease $fade-time;
-        -webkit-animation: fadeOut ease $fade-time;
-        -moz-animation: fadeOut ease $fade-time;
-        -o-animation: fadeOut ease $fade-time;
-        -ms-animation: fadeOut ease $fade-time;
-      }
-      @keyframes fadeOut {
-        0% {
-          opacity:1;
-        }
-        100% {
-          opacity:0;
-        }
-      }
-      
-      @-moz-keyframes fadeOut {
-        0% {
-          opacity:1;
-        }
-        100% {
-          opacity:0;
-        }
-      }
-      
-      @-webkit-keyframes fadeOut {
-        0% {
-          opacity:1;
-        }
-        100% {
-          opacity:0;
-        }
-      }
-      
-      @-o-keyframes fadeOut {
-        0% {
-          opacity:1;
-        }
-        100% {
-          opacity:0;
-        }
-      }
-      
-      @-ms-keyframes fadeOut {
-        0% {
-          opacity:1;
-        }
-        100% {
-          opacity:0;
-      }
+  p {color: variables.$text-light;}
 }
 
-body {
-	margin: 0;
-	padding: 0;
-}
 .page-wrapper { 
-
-	display: flex;
-	flex-direction: row;
-	width: 300vw;
+  display: flex;
+  flex-direction: row;
 }
 
 .page-wrapper > *{
-	width: 100vw;
-	height: 100vh;
-	
-	background-color: tan;
+width: 100vw;
+height: 100vh;
+padding: 0px 5px;
+margin: 0px 5px;
+background-color: tan;
 }
-
-// @if $show-first-third{
-//     .intro{
-//         @include fade-in();
-//     }
-
-//     .sidebar{
-//         @include fade-in();
-//     }
-//     #zen-supporting{
-//         @include fade-out();
-//     }
-// }
-
-header{
-  background-color: variables.$primary;
-
-  // ::before{
-  //   content: url('./logo.svg');
-  // }
-}
-
-// header h1::before{
-//   content: url('./logo.svg');
-// }
-
-#outter-shield{
-  fill: aqua;
-}
-
-// #zen-supporting{
-//   display: flex;
-//   flex-direction: column;
-// }
-
-
-#zen-supporting div p {
-  
-  display: none;
-
-  
-}
-
-
-#zen-supporting div{
-  height: 48px;
-  font-size: 1rem;
-  transition: height .5s linear;
-
-}
-
-
-#zen-supporting div:hover{
-  height: 300px;
-  font-size: 1rem;
-
-  p{
-    display: block;
-
-  }
-  
-  ~ div{
-    display: none;
-  }
-  // transition: height .5s linear;
-  transition: font-size 1.5s linear;
-}
-
 
 .wrapper{
   display: flex;
@@ -206,22 +41,18 @@ header{
   @include variables.largeView(){
     flex-direction: row;
   }
-
   > div{
-    background-color: white;
-    border: 2px solid variables.$primary;
+    background-image: linear-gradient(to right, variables.$accent2, variables.$accent1);
+    border: 2px solid white;
+    border-radius: 20px;
     padding: 1rem;
   }
-
   .design-archives{
     order: 2;
-
-  @include variables.largeView(){
+    @include variables.largeView(){
       order: -1;
+    }
   }
-
-
 }
 
-  
-}
+
