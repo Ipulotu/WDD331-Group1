@@ -27,8 +27,7 @@ body{
     // font-size: 3rem;
     font-size: clamp(3vw, 5vw, 7vw);
     color: variables.$primary;
-    // background-color: variables.$accent1;
-    background-image: linear-gradient(to right, variables.$accent2, variables.$accent1);
+    background-color: variables.$accent1;
     text-align: right;
     padding: 5px;
   }
@@ -36,9 +35,6 @@ body{
   
   .main div{
     background-color: variables.$primary;
-    a{
-      color: variables.$primary;
-    }
   }
   .main p {
     color: variables.$text-light;
@@ -62,19 +58,7 @@ body{
 	margin: 0;
 	padding: 0;
 }
-// .page-wrapper { 
 
-// 	display: flex;
-// 	flex-direction: row;
-// 	width: 300vw;
-// }
-
-// .page-wrapper > *{
-// 	width: 100vw;
-// 	max-height: 100%;
-	
-// 	background-color: tan;
-// }
 
 #zen-intro{
   padding: 0px; 
@@ -83,9 +67,7 @@ body{
   grid-template-rows: 1fr 2fr;
 
   @media screen  and (max-width: 500px) { 
-    display: flex;
-    flex-direction: column;
-    
+    grid-template-rows: 1fr 1fr 1fr;
   }
 
   > * {
@@ -103,6 +85,7 @@ body{
     @media screen  and (max-width: 500px) { 
       grid-column: none;
       max-height: 130px;
+      order: 0;
     }
 
     display: grid;
@@ -137,8 +120,8 @@ body{
     overflow-y:auto;
 
     @media screen  and (max-width: 500px) { 
-      grid-column: none;
-      
+      grid-column: 1 / span 2;
+      grid-row: 2 / span 1;
       border-width: 0px;
     }
 
@@ -154,11 +137,12 @@ body{
   p{
     grid-column: 1/ span 4;
   }
-  // @media screen  and (max-width: 500px) { 
-  //   grid-column: none;
-  //   order: 2;
-  //   height: 200px;
-  // }
+
+  @media screen  and (max-width: 500px) { 
+    grid-column: 1 / span 2;
+    grid-row: 3 / span 1;
+    border-width: 0px;
+  }
 }
 
 
@@ -253,10 +237,8 @@ header{
     }
   
     > div{
-      // background-color: white;
-      background-image: linear-gradient(to right, variables.$accent2, variables.$accent1);
-      border: 2px solid white;
-      border-radius: 20px;
+      background-color: white;
+      border: 2px solid variables.$primary;
       padding: 1rem;
     }
   
@@ -315,10 +297,10 @@ header{
   }
 }
 
-// .sidebar{
-//   background-image:  url("logo.svg");
-//   background-position: center;
-//   background-position-x: 25px;
-//   background-position-y: 25px;
+.sidebar{
+  background-image:  url("logo.svg");
+  background-position: center;
+  background-position-x: 25px;
+  background-position-y: 25px;
 
-// }
+}

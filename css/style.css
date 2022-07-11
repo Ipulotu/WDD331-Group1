@@ -24,13 +24,16 @@ h1 {
 .main h3 {
   font-size: 5vw;
   color: #102634;
-  background-color: #90564a;
+  background-image: linear-gradient(to right, #a99e8c, #90564a);
   text-align: right;
   padding: 5px;
 }
 
 .main div {
   background-color: #102634;
+}
+.main div a {
+  color: #102634;
 }
 
 .main p {
@@ -121,7 +124,6 @@ body {
 @media screen and (max-width: 500px) {
   #zen-intro #zen-preamble {
     grid-column: none;
-    order: 2;
     border-width: 0px;
   }
 }
@@ -176,8 +178,9 @@ header {
   }
 }
 .wrapper > div {
-  background-color: white;
-  border: 2px solid #102634;
+  background-image: linear-gradient(to right, #a99e8c, #90564a);
+  border: 2px solid white;
+  border-radius: 20px;
   padding: 1rem;
 }
 .wrapper .design-archives {
@@ -222,13 +225,6 @@ header {
 }
 .page-wrapper #zen-supporting footer {
   display: none;
-}
-
-.sidebar {
-  background-image: url("logo.svg");
-  background-position: center;
-  background-position-x: 25px;
-  background-position-y: 25px;
 }
 
 /*# sourceMappingURL=style.css.map */
